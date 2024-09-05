@@ -1,50 +1,53 @@
 ---
 // const personalImageAlt = "Miguel Ángel"
-import Badge from "@/components/Badge.astro"
-import SocialPill from "@/components/SocialPill.astro"
-import GitHub from "@/icons/GitHub.astro"
-import LinkedIn from "@/icons/LinkedIn.astro"
-import Mail from "@/icons/Mail.astro"
+import Badge from '@/components/Badge.astro';
+import SocialPill from '@/components/SocialPill.astro';
+import GitHub from '@/icons/GitHub.astro';
+import LinkedIn from '@/icons/LinkedIn.astro';
+import Mail from '@/icons/Mail.astro';
+import CvIcon from '../icons/CvIcon.astro';
 ---
 
-<div class="max-w-xl">
-  <div class="flex gap-4 mb-4">
+<div class='max-w-xl'>
+  <div class='flex gap-4 mb-4'>
     <!-- <img
       class="rounded-full shadow-lg size-16"
       src="/midudev.webp"
       alt={personalImageAlt}
     /> -->
     <a
-      href="https://linkedin.com/in/santic93"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
+      href='https://linkedin.com/in/santic93'
+      target='_blank'
+      rel='noopener'
+      class='flex items-center transition md:justify-center md:hover:scale-105'
     >
       <Badge>Cualquier consulta es bienvenida</Badge>
     </a>
   </div>
   <h1
-    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+    class='text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white'
   >
-   Hola! Soy Santiago
+    Hola! Soy Santiago
   </h1>
   <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+    class='mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300'
   >
-    +4 años de experiencia. <strong
+    +4 años de experiencia en la creación de interfaces web modernas. <strong
       >Desarrollador Full Stack</strong
-    > de Argentina, BsAs. Especializado en el Front End.
+    > de Bs.As, Argentina. Especializado en el Front End.
   </p>
-  <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="https://github.com/santic93">
-      <GitHub class="size-4" />
+  <nav class='flex flex-wrap gap-4 mt-8 justify-end'>
+    <SocialPill href='https://github.com/santic93'>
+      <GitHub class='size-5' />
     </SocialPill>
-    <SocialPill href="https://linkedin.com/in/santic93">
-      <LinkedIn class="size-4" />
+    <SocialPill href='https://linkedin.com/in/santic93'>
+      <LinkedIn class='size-5' />
     </SocialPill>
-    <SocialPill href="mailto:santiagocastro.sac@gmail.com">
-      <Mail class="size-4" />
+    <SocialPill href='mailto:santiagocastro.sac@gmail.com'>
+      <Mail class='size-5' />
     </SocialPill>
-   
+    <SocialPill href='public/assets/Santiago-Castro-Resume-2025.pdf' download='santiago_castro_cv.pdf'>
+      <CvIcon class='size-4' />
+    </SocialPill>
   </nav>
 </div>
