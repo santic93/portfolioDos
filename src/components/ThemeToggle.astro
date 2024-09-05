@@ -1,10 +1,10 @@
 ---
 import Moon from "@/icons/Moon.astro"
 import Sun from "@/icons/Sun.astro"
-import System from "@/icons/System.astro"
 
 
-const THEMES = ["Light", "Dark", "System"]
+
+const THEMES = ["Light", "Dark"]
 ---
 
 <div class="relative ml-1 mr-1">
@@ -19,10 +19,7 @@ const THEMES = ["Light", "Dark", "System"]
       id="dark"
       class="theme-toggle-icon absolute size-5 transition-all"
     />
-    <System
-      id="system"
-      class="theme-toggle-icon absolute size-5 transition-all"
-    />
+
   </button>
   <div
     transition:persist
