@@ -11,27 +11,27 @@ import RRDom from '@/icons/RRDomIcon.astro';
 const TAGS = {
   REACT: {
     name: 'React.js',
-    class: 'bg-black text-white',
+    class: 'bg-[#FACC15] shadow-lg shadow-[#FACC15]/50',
     icon: ReactJS,
   },
   MATERIAL: {
     name: 'Material UI',
-    class: 'bg-[#003159] text-white',
+    class: 'bg-[#FACC15] shadow-lg shadow-[#FACC15]/50',
     icon: MaterialUI,
   },
   FIREBASE: {
     name: 'Firebase',
-    class: 'bg-[#003159] text-white',
+    class: 'bg-[#FACC15] shadow-lg shadow-[#FACC15]/50',
     icon: Firebase,
   },
   REDUX: {
     name: 'RTK',
-    class: 'bg-[#003159] text-white',
+    class: 'bg-[#FACC15] shadow-lg shadow-[#FACC15]/50',
     icon: Redux,
   },
   ROUTER: {
-    name: 'Router DOM',
-    class: 'bg-[#003159] text-white',
+    name: 'React Router DOM',
+    class: 'bg-[#FACC15] shadow-lg shadow-[#FACC15]/50',
     icon: RRDom,
   },
 };
@@ -49,9 +49,10 @@ const PROJECTS = [
     title: 'Journal App',
     description:
       'CRUD con React JS, React Router DOM, Firebase DB, Firebase Authentication, RTK, Material UI.',
-    link: 'https://journal-app-seven-ebon.vercel.app/auth/login',
+    link: 'https://journal-app-seven-ebon.vercel.app/',
+    github: 'https://github.com/santic93/journalApp',
     image: '/projects/journal.webp',
-    tags: [TAGS.REACT, TAGS.MATERIAL,TAGS.REDUX,TAGS.FIREBASE,TAGS.ROUTER],
+    tags: [TAGS.REACT, TAGS.MATERIAL, TAGS.REDUX, TAGS.FIREBASE, TAGS.ROUTER],
   },
 ];
 ---
@@ -71,7 +72,7 @@ const PROJECTS = [
           </div>
         </div>
 
-        <div class='w-full md:w-1/2 md:max-w-lg'>
+        <div class='w-full md:w-1/2 md:max-w-lg '>
           <h3 class='text-2xl font-bold text-gray-800 dark:text-gray-100'>
             {title}
           </h3>
@@ -80,9 +81,9 @@ const PROJECTS = [
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 font-bold text-green-950 hover:bg-transparent hover:text-[#FACC15]  `}
                   >
-                    <tag.icon class='size-4' />
+                    {/* <tag.icon class='size-4' /> */}
                     {tag.name}
                   </span>
                 </li>
