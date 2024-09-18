@@ -87,7 +87,7 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
-          <div class="text-center align-middle relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-md  sm:rounded-md  md:group-hover:-translate-y-1 md:group-hover:shadow-2xl min-h-72">
+          <div class="text-center align-middle relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-lg   sm:rounded-lg  md:group-hover:-translate-y-1 md:group-hover:shadow-2xl ">
             <img
               alt="imagen proyecto"
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
@@ -102,9 +102,9 @@ const PROJECTS = [
             {title}
           </h3>
           <div class="flex flex-wrap mt-2 ">
-            <ul class="flex flex-row mb-2">
+            <ul class="flex flex-row mb-2 ">
               {tags.map((tag) => (
-                <li class="ml-2 flex flex-wrap justify-center text-center align-middle">
+                <li class="ml-1 flex flex-wrap justify-center text-center align-middle" >
                   <span
                     class={`rounded-md px-1 flex text-center text-opacity-90 text-sm ${tag.class} align-middle font-bold text-green-950 hover:bg-transparent hover:text-cyan-50 max-h-10 `}
                   >
