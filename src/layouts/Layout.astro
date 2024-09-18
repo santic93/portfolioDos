@@ -4,27 +4,54 @@ import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
-
-interface Props {
-  title: string;
-  description: string;
-}
-
-const { description, title } = Astro.props;
-
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload, icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="author" content="Santiago Castro" />
     <meta name="copyright" content="Santiago Castro" />
-    <title>{title}</title>
+    <meta
+      name="description"
+      content="Soy Santiago Castro, Desarrollador Web Front End, este es mi portfolio personal, donde muestro mis proyectos, contacto, experiencia y mas informacion sobre mi"
+    />
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Astro, Tailwind" />
+    <meta
+      property="og:title"
+      content="Santiago Castro Front End Developer * Programador"
+    />
+    <meta
+      property="og:description"
+      content="Santiago Castro Front End Developer * Programador"
+    />
+    <meta property="og:url" content="https://santiagocastro.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="public/favicon.svg" />
+    <meta name="twitter:card" content="public/favicon.svg" />
+    <meta
+      name="twitter:title"
+      content="Santiago Castro Front End Developer * Programador"
+    />
+    <meta
+      name="twitter:description"
+      content="Soy Santiago Castro, Desarrollador Web Front End, este es mi portfolio personal, donde muestro mis proyectos, contacto, experiencia y mas informacion sobre mi"
+    />
+    <meta name="twitter:image" content="public/favicon.svg" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+
+    <title>
+      Portfolio Santiago Castro Front End Developer / Desarrollador y
+      Programador
+    </title>
     <ViewTransitions />
   </head>
   <body class="relative text-black dark:text-white">

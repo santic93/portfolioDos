@@ -1,5 +1,4 @@
 ---
-
 import Layout from "@/layouts/Layout.astro";
 
 import AboutMe from "@/components/AboutMe.astro";
@@ -12,13 +11,9 @@ import Briefcase from "@/icons/BriefcaseIcon.astro";
 import Code from "@/icons/CodeIcon.astro";
 import ProfileCheck from "@/icons/ProfileCheckIcon.astro";
 import Pc from "@/icons/PcIcon.astro";
-
 ---
 
-<Layout
-  title="Front End Developer / Desarrollador y Programador / Santiago Castro"
-  description="Front End Developer / Desarrollador y Programador / Santiago Castro"
->
+<Layout>
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
       <Hero />
@@ -28,7 +23,7 @@ import Pc from "@/icons/PcIcon.astro";
     <SectionContainer id="experiencia">
       <TitleSection>
         <Pc class="size-8" />
-      Experiencia Laboral
+        Experiencia Laboral
       </TitleSection>
       <Experience />
     </SectionContainer>
