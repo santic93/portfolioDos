@@ -1,23 +1,20 @@
 ---
-
 import Layout from "@/layouts/Layout.astro";
-
-import AboutMe from "@/components/AboutMe.astro";
-import Experience from "@/components/Experience.astro";
-import Projects from "@/components/Projects.astro";
-import SectionContainer from "@/components/SectionContainer.astro";
-import Hero from "@/components/Hero.astro";
-import TitleSection from "@/components/TitleSection.astro";
 import Briefcase from "@/icons/BriefcaseIcon.astro";
 import Code from "@/icons/CodeIcon.astro";
 import ProfileCheck from "@/icons/ProfileCheckIcon.astro";
 import Pc from "@/icons/PcIcon.astro";
-
+import SectionContainer from "@/components/SectionContainer.astro";
+import Hero from "./Hero.astro";
+import AboutMe from "./AboutMe.astro";
+import TitleSection from "@/components/TitleSection.astro";
+import Experience from "./Experience.astro";
+import Projects from "./Projects.astro";
 ---
 
 <Layout
-  title="Front End Developer / Desarrollador y Programador / Santiago Castro"
-  description="Front End Developer / Desarrollador y Programador / Santiago Castro"
+  title="Desenvolvedor Front End / Desenvolvedor e Programador / Santiago Castro"
+  description="Desenvolvedor Front End / Desenvolvedor e Programador / Santiago Castro"
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
@@ -28,7 +25,7 @@ import Pc from "@/icons/PcIcon.astro";
     <SectionContainer id="experiencia">
       <TitleSection>
         <Pc class="size-8" />
-      Experiencia Laboral
+        Experiência de trabalho
       </TitleSection>
       <Experience />
     </SectionContainer>
@@ -36,7 +33,7 @@ import Pc from "@/icons/PcIcon.astro";
     <SectionContainer id="proyectos">
       <TitleSection>
         <Code class="size-8" />
-        Proyectos
+        Projetos
       </TitleSection>
       <Projects />
     </SectionContainer>
@@ -44,7 +41,7 @@ import Pc from "@/icons/PcIcon.astro";
     <SectionContainer id="sobre-mi">
       <TitleSection>
         <ProfileCheck class="size-8" />
-        Sobre mí
+        sobre mim
       </TitleSection>
       <AboutMe />
     </SectionContainer>
