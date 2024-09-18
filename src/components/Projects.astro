@@ -3,7 +3,6 @@ import GitHub from "@/icons/GitHubIcon.astro";
 import LinkButton from "./LinkButton.astro";
 import Link from "@/icons/LinkIcon.astro";
 
-
 const TAGS = {
   REACT: {
     name: "React.Js",
@@ -49,7 +48,7 @@ const PROJECTS = [
       "CRUD con React JS, React Router DOM, Firebase DB, Firebase Authentication, RTK, Material UI.",
     link: "https://journal-app-seven-ebon.vercel.app/",
     github: "https://github.com/santic93/journalApp",
-    image: "/projects/journal.webp",
+    image: "public/assets/journal.webp",
     tags: [TAGS.REACT, TAGS.MATERIAL, TAGS.REDUX, TAGS.FIREBASE, TAGS.ROUTER],
   },
   {
@@ -58,7 +57,7 @@ const PROJECTS = [
       "Aplicacion Responsiva, desarrollada con React JS, React Router DOM, consumiendo la API themealdb.",
     link: "https://foods-ten-eta.vercel.app/",
     github: "https://github.com/santic93/foods",
-    image: "/projects/food.webp",
+    image: "public/assets/food.webp",
     tags: [TAGS.REACT, TAGS.MATERIAL],
   },
 
@@ -67,17 +66,17 @@ const PROJECTS = [
     description: "Pagina con HTML, CSS y JavaScript.",
     link: "https://trueno-nine.vercel.app/",
     github: "https://github.com/santic93/trueno",
-    image: "/projects/trueno.webp",
+    image: "public/assets/trueno.webp",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
   },
 
   {
     title: "Heroes",
     description:
-      "Aplicacion Responsiva con React JS, React Router DOM, Context, Bootstrap.",
+      "Aplicacion Responsiva con React JS, React Router DOM, Context, Bootstrap, consumuiendo JSON local.",
     link: "https://hero-delta-one.vercel.app/",
     github: "https://github.com/santic93/journalApp",
-    image: "/projects/heroes.webp",
+    image: "public/assets/hero.webp",
     tags: [TAGS.REACT, TAGS.BOOTSTRAP, TAGS.ROUTER],
   },
 ];
@@ -88,7 +87,7 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
-          <div class="text-center align-middle relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50 min-h-80 ">
+          <div class="text-center align-middle relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-none lg:hover:border-gray-700 min-h-72">
             <img
               alt="imagen proyecto"
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
@@ -120,7 +119,7 @@ const PROJECTS = [
             </div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
               {github && (
-                <LinkButton href={github} >
+                <LinkButton href={github}>
                   <GitHub class="size-6 " />
                   Codigo
                 </LinkButton>
