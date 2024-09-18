@@ -144,10 +144,22 @@ const THEMES = ["Light", "Dark"]
 </div>
 
 <style>
-  #themes-menu.open {
+  /* #themes-menu.open {
     display: inline;
     animation: scale-up-center 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
+  } */
+  #themes-menu {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+#themes-menu.open {
+  transform: scale(1);
+  opacity: 1;
+  display: block;
+}
+
 
   @keyframes scale-up-center {
     from {
@@ -160,6 +172,16 @@ const THEMES = ["Light", "Dark"]
       opacity: 1;
     }
   }
+  #theme-toggle-btn {
+  z-index: 20; /* Asegura que el botón esté por encima de otros elementos */
+  pointer-events: auto; /* Asegura que el botón detecte clics */
+}
+
+#themes-menu {
+  z-index: 30; /* El menú debe estar encima del botón y otros elementos */
+  pointer-events: auto; /* Asegura que el menú detecte clics */
+}
+
 </style>
 
 <script is:inline>
@@ -196,11 +218,17 @@ const THEMES = ["Light", "Dark"]
   matchMedia.addEventListener("change", updateTheme);
 
   // Evento para mostrar/ocultar el menú de temas
+  // toggleButton.addEventListener("click", (e) => {
+  //   e.stopPropagation();
+  //   const isClosed = !themesMenu.classList.contains("open");
+  //   themesMenu.classList.toggle("open", isClosed);
+  // });
   toggleButton.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const isClosed = !themesMenu.classList.contains("open");
-    themesMenu.classList.toggle("open", isClosed);
-  });
+  e.stopPropagation(); // Evita cerrar inmediatamente por el document.click
+  const isClosed = !themesMenu.classList.contains("open");
+  themesMenu.classList.toggle("open", isClosed);
+});
+
 
   // Ocultar el menú si se hace clic fuera
   document.addEventListener("click", () => {
