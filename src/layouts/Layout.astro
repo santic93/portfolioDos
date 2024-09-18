@@ -9,45 +9,48 @@ import { ViewTransitions } from "astro:transitions";
 <!doctype html>
 <html lang="es">
   <head>
+    <link rel="preload, icon" type="image/svg+xml" href="/favicon.svg" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload, icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <!-- Corregir preload y favicon -->
+    <link rel="preload" href="/favicon.svg" as="image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Revisa si esta línea es necesaria o corrige la referencia -->
+    <!-- <meta name="generator" content={Astro.generator} /> -->
+    
     <meta name="author" content="Santiago Castro" />
     <meta name="copyright" content="Santiago Castro" />
-    <meta
-      name="description"
-      content="Soy Santiago Castro, Desarrollador Web Front End, este es mi portfolio personal, donde muestro mis proyectos, contacto, experiencia y mas informacion sobre mi"
-    />
-    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <meta name="description" content="Soy Santiago Castro, Desarrollador Web Front End, este es mi portfolio personal, donde muestro mis proyectos, contacto, experiencia y más información sobre mí." />
+    <!-- Eliminar charset duplicado -->
+    <!-- <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" /> -->
     <meta name="keywords" content="HTML, CSS, JavaScript, Astro, Tailwind" />
-    <meta
-      property="og:title"
-      content="Santiago Castro Front End Developer * Programador"
-    />
-    <meta
-      property="og:description"
-      content="Santiago Castro Front End Developer * Programador"
-    />
+    
+    <!-- Open Graph para compartir en redes sociales -->
+    <meta property="og:title" content="Santiago Castro Front End Developer * Programador" />
+    <meta property="og:description" content="Santiago Castro Front End Developer * Programador" />
     <meta property="og:url" content="https://santiagocastro.vercel.app/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="public/favicon.svg" />
-    <meta name="twitter:card" content="public/favicon.svg" />
-    <meta
-      name="twitter:title"
-      content="Santiago Castro Front End Developer * Programador"
-    />
-    <meta
-      name="twitter:description"
-      content="Soy Santiago Castro, Desarrollador Web Front End, este es mi portfolio personal, donde muestro mis proyectos, contacto, experiencia y mas informacion sobre mi"
-    />
-    <meta name="twitter:image" content="public/favicon.svg" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
+    <meta property="og:image" content="/favicon.svg" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Santiago Castro Front End Developer * Programador" />
+    <meta name="twitter:description" content="Soy Santiago Castro, Desarrollador Web Front End, este es mi portfolio personal, donde muestro mis proyectos, contacto, experiencia y más información sobre mí." />
+    <meta name="twitter:image" content="/favicon.svg" />
 
+    <!-- Remover X-UA-Compatible (deprecated para navegadores modernos) -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+
+    <!-- Remover cache control si no es necesario -->
+    <!-- <meta http-equiv="cache-control" content="no-cache" /> -->
+
+    <!-- Ajustar Content-Security-Policy si es necesario -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';" />
+
+    <!-- SEO - Asegúrate de indexar el sitio si está listo -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
     <title>
       Portfolio Santiago Castro Front End Developer / Desarrollador y
       Programador
