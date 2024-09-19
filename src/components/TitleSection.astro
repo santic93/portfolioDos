@@ -11,5 +11,14 @@
   50% { transform: translateX(2px); }
   75% { transform: translateX(-2px); }
 }
+@media (hover: none) {
+  .hover\:animate-buzz:hover {
+    animation: buzz 0.15s linear infinite;
+  }
+
+  .hover\:animate-buzz:focus-visible {
+    animation: none;
+  }
+}
 
 </style>
